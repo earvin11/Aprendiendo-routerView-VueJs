@@ -1,15 +1,18 @@
 <template>
+  <Navbar />
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Para hacer lazyLoading
+import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //Para hacr lazyLoad utiliza el metodo importado y dentro la importacion del componente a cargar
+    Navbar: defineAsyncComponent(() => import('./modules/shared/components/Navbar.vue'))
   }
 }
 </script>
