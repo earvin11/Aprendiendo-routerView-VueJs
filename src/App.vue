@@ -11,7 +11,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   name: 'App',
   components: {
-    //Para hacr lazyLoad utiliza el metodo importado y dentro la importacion del componente a cargar
+    //Para hacer lazyLoad utiliza el metodo importado y dentro la importacion del componente a cargar
     Navbar: defineAsyncComponent(() => import('./modules/shared/components/Navbar.vue'))
   }
 }
